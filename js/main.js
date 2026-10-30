@@ -51,6 +51,7 @@ function renderLetter(done) {
   const own = letters[place.id]?.[lang] || letters[place.id]?.en;
   const texts = own ? own.paras : t('letter');
   const paras = texts.map(text => Object.assign(document.createElement('p'), { textContent: text }));
+  if (own?.ask) paras.push(Object.assign(document.createElement('p'), { textContent: own.ask, className: 'ask' }));
   if (done && place.id === 'starry-bench') paras.push(Object.assign(document.createElement('p'), { textContent: ui[lang].ps, className: 'ps' }));
   $('#letter-body').replaceChildren(...paras);
   $('#letter-title').textContent = own ? own.title : t('letterTitle');

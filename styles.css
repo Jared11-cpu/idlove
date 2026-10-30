@@ -124,3 +124,10 @@ body.staying .sky-fx{z-index:3}
 
 /* `clip` (unlike `hidden`) can never be scrolled by focus or scrollIntoView, so the painting never slides off its edge. */
 @supports (overflow:clip){#experience,.artwork,.sky-fx{overflow:clip}}
+
+/* The letter's closing question, and the letter sitting beside the painting on wide screens. */
+.paper .ask{font-style:italic;margin-top:1.4em;padding:.7em 0 0 1em;border-left:2px solid #d9a4a8;color:#4c5a46}
+@media(min-aspect-ratio:4/5){
+  .letter[open]{width:min(560px,calc(100vw - 32px));margin:auto auto auto max(20px,3vw)}
+  .letter::backdrop{background:rgba(24,61,59,.16);backdrop-filter:none;-webkit-backdrop-filter:none}
+}
