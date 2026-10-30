@@ -60,6 +60,7 @@ export const chapters = [
         en: { label: '', title: "The sun, in no hurry", body: "It sets slowly here, so that nobody has to rush." },
         id: { label: '', title: "Matahari yang tidak terburu-buru", body: "Di sini ia terbenam pelan-pelan, supaya tidak ada yang perlu bergegas." },
         zh: { label: '', title: "不着急的太阳", body: "在这里它落得很慢，这样谁都不用赶。" } } },
+    { id: 'letter', icon: '✉', letter: true, dockOnly: true, at: { landscape: [.5, .5], portrait: [.5, .5] } },
   ], { sun: { landscape: [.13, .29], portrait: [.23, .22] }, lantern: { landscape: [-1, -1], portrait: [-1, -1] } }),
   chapter('seaside-path', { en: 'Seaside path', id: 'Jalan tepi laut', zh: '海边小路' }, [
     { id: 'shell', icon: '❁', burst: '❀', at: { landscape: [.46, .88], portrait: [.34, .79] }, hit: [.10, .10],
@@ -82,6 +83,7 @@ export const chapters = [
         en: { label: '', title: "An empty boat", body: "Nobody is on it. It is just resting on the water, and you can rest too." },
         id: { label: '', title: "Perahu kosong", body: "Tidak ada siapa-siapa di atasnya. Ia hanya beristirahat di atas air, dan kamu juga boleh." },
         zh: { label: '', title: "一条空船", body: "船上没有人，它只是在水面上休息，你也可以休息。" } } },
+    { id: 'letter', icon: '✉', letter: true, dockOnly: true, at: { landscape: [.5, .5], portrait: [.5, .5] } },
   ], { sun: { landscape: [.28, .29], portrait: [.21, .34] }, lantern: { landscape: [-1, -1], portrait: [-1, -1] }, dock: 'right' }),
   chapter('starry-bench', { en: 'Under the stars', id: 'Di bawah bintang', zh: '星空下' }, [
     { id: 'shootingstar', icon: '✧', burst: '✧', at: { landscape: [.21, .19], portrait: [.22, .19] }, hit: [.16, .12],

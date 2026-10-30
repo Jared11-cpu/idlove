@@ -2,6 +2,7 @@ import { settings, copy } from './content.js';
 import { ui } from './experience-copy.js';
 import { createLivingLayer } from './living.js';
 import { chapters, availableArt, closeupUrl } from './chapters.js';
+import { letters } from './letters.js';
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 const params = new URLSearchParams(location.search);
@@ -45,10 +46,15 @@ function applyLanguage() {
 function spotText(spot, field) {
   return spot.copy === 'content' ? t(`spots.${spot.id}.${field}`) : spot.copy[lang]?.[field] ?? spot.copy.en[field];
 }
+// Each place has its own letter; the garden keeps the original one from content.js.
 function renderLetter(done) {
-  const paras = t('letter').map(text => Object.assign(document.createElement('p'), { textContent: text }));
-  if (done) paras.push(Object.assign(document.createElement('p'), { textContent: ui[lang].ps, className: 'ps' }));
+  const own = letters[place.id]?.[lang] || letters[place.id]?.en;
+  const texts = own ? own.paras : t('letter');
+  const paras = texts.map(text => Object.assign(document.createElement('p'), { textContent: text }));
+  if (done && place.id === 'starry-bench') paras.push(Object.assign(document.createElement('p'), { textContent: ui[lang].ps, className: 'ps' }));
   $('#letter-body').replaceChildren(...paras);
+  $('#letter-title').textContent = own ? own.title : t('letterTitle');
+  $('.paper .signoff').textContent = own ? own.sign : t('signoff');
 }
 function updateProgress() {
   const all = places.flatMap(c => c.spots.filter(s => !s.letter && !s.secret).map(s => `${c.id}:${s.id}`));
@@ -227,8 +233,8 @@ function makeButton(className, spot, icon, text) {
   return b;
 }
 function renderSpots() {
-  const hit = place.spots.map(s => { const b = makeButton('hit-region', s, null, null); b.setAttribute('aria-label', spotLabel(s)); return b; });
-  const pins = place.spots.filter(s => !s.secret).map(s => makeButton('hotspot', s, '', spotLabel(s)));
+  const hit = place.spots.filter(s => !s.dockOnly).map(s => { const b = makeButton('hit-region', s, null, null); b.setAttribute('aria-label', spotLabel(s)); return b; });
+  const pins = place.spots.filter(s => !s.secret && !s.dockOnly).map(s => makeButton('hotspot', s, '', spotLabel(s)));
   const order = place.spots.filter(s => !s.secret && !s.letter).concat(place.spots.filter(s => s.letter));
   const dock = order.map(s => makeButton(`spot-btn${s.letter ? ' spot-letter' : ''}`, s, s.icon, s.letter ? t('readLetter') : spotLabel(s)));
   $('#hotspots').replaceChildren(...hit, ...pins);
