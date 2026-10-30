@@ -1,0 +1,126 @@
+:root{--paper:#fcf7ec;--ink:#344840;--muted:#69776a;--line:#d4cdb9;--gold:#dcc395;--serif:Georgia,'Palatino Linotype','Noto Serif',serif;--sans:'Segoe UI','Trebuchet MS',sans-serif;--safe-top:env(safe-area-inset-top,0px);--safe-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html,body{margin:0;width:100%;min-height:100%;background:#648e98}body{font-family:var(--sans);color:var(--ink);overflow:hidden}button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}button,a{font:inherit}button{cursor:pointer}button:disabled{cursor:wait}button:focus-visible,a:focus-visible{outline:3px solid #f5cf7e;outline-offset:5px}button{color:inherit}button,a{transition:background-color .2s,color .2s,transform .2s}button:hover{filter:brightness(1.05)}[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
+#experience{position:relative;isolation:isolate;height:100svh;min-height:480px;overflow:hidden}.artwork{position:absolute;inset:-8px;z-index:-3;transform:translate(var(--pan-x,0px),var(--pan-y,0px));transition:transform 1.8s ease;overflow:hidden}.artwork picture,.artwork img{display:block;width:100%;height:100%}.artwork img{object-fit:cover;object-position:center}.sunlight{position:absolute;inset:0;background:radial-gradient(ellipse at 10% 24%,#fff5ce33,transparent 49%);mix-blend-mode:screen;pointer-events:none;animation:light-breathe 14s ease-in-out infinite alternate}.intro-shade,.edge-shade{position:absolute;inset:0;z-index:-1;pointer-events:none}.intro-shade{background:linear-gradient(90deg,rgba(18,51,58,.64),rgba(24,59,62,.23) 40%,transparent 68%);transition:opacity 1.2s}.in-garden .intro-shade{opacity:0}.edge-shade{background:linear-gradient(180deg,#153d4055,transparent 20%,transparent 76%,#183d3b80)}
+.topbar{position:absolute;left:4%;right:4%;top:calc(25px + var(--safe-top));display:flex;align-items:center;justify-content:space-between;gap:16px;color:#fff9e9;z-index:5}.wordmark{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;font-family:var(--serif);font-size:24px;letter-spacing:.025em;text-shadow:0 1px 8px #23474299}.brand-flower{font-size:27px;color:#fae7ba}.brand-separator{height:18px;width:1px;background:#fff4}.brand-sub{font-family:var(--sans);font-size:10px;letter-spacing:.19em;text-transform:uppercase}.top-actions{display:flex;gap:24px;align-items:center;font-size:11px;letter-spacing:.08em}.text-control,.lang button{border:0;background:transparent;color:inherit;padding:12px 3px;min-height:44px}.text-control{border-bottom:1px solid #fff5}.text-control[aria-pressed=true]{color:#ffe6aa}.lang{display:flex;gap:5px;align-items:center}.lang button{min-width:36px;opacity:.65}.lang button[aria-pressed=true]{opacity:1;text-decoration:underline;text-underline-offset:7px}.lang span{opacity:.45}.lang button:hover,.text-control:hover{background:#ffffff17}
+.intro{position:absolute;top:29%;left:8%;width:36%;max-width:540px;color:#fff9ec;transition:opacity .7s,transform .7s}.eyebrow{font-size:10px;letter-spacing:.26em;text-transform:uppercase;font-weight:600;line-height:1.6;margin:0 0 20px}.intro h1{font:normal clamp(46px,5.5vw,88px)/1.02 var(--serif);letter-spacing:-.045em;white-space:pre-line;text-wrap:balance;margin:0 0 25px;text-shadow:0 2px 22px #183e4233}.intro-copy{font-size:14px;line-height:1.85;max-width:315px;color:#fffcf1e8;margin:0 0 28px}.open-button{display:inline-flex;gap:35px;align-items:center;justify-content:space-between;min-height:52px;padding:14px 21px;border:1px solid #f6efdaaa;background:#fbf6e7;color:#344840;font-size:12px;letter-spacing:.04em;border-radius:3px;box-shadow:0 6px 24px #153a391a}.open-button:hover{background:white;transform:translateY(-2px)}.open-button>span:last-child{font-size:21px}.intro-footnote{font-size:10px;letter-spacing:.06em;color:#fff7d9c9;margin:18px 0}.intro.is-leaving{opacity:0;transform:translateY(12px);pointer-events:none}
+.garden-caption{position:absolute;left:5%;top:calc(100px + var(--safe-top));color:white;text-shadow:0 2px 15px #254e55cc;pointer-events:none}.garden-caption .eyebrow{margin-bottom:8px;font-size:9px}.garden-caption h2{font:normal clamp(22px,2.6vw,36px)/1.2 var(--serif);margin:0}.hotspots{position:absolute;inset:0;pointer-events:none}.hotspot{position:absolute;display:flex;align-items:center;gap:8px;transform:translate(-50%,-50%);min-height:44px;padding:7px 13px 7px 9px;border:1px solid #fff9;background:#fdf8e9ed;border-radius:30px;color:#344840;font-size:11px;box-shadow:0 3px 15px #334c432b;pointer-events:auto;white-space:nowrap}.hotspot-dot{width:8px;height:8px;border:1px solid #6e806c;border-radius:50%;background:#b6c7a0;flex:none}.hotspot:hover{background:#fffdf4;box-shadow:0 4px 18px #334c4355}.hotspot.is-visited .hotspot-dot{background:#d6a487;border-color:#b28068}.garden-bottom{position:absolute;bottom:calc(19px + var(--safe-bottom));left:50%;transform:translateX(-50%);text-align:center;width:max-content;max-width:calc(100% - 32px)}.explore-hint{font-size:10px;letter-spacing:.12em;color:#fff9eb;text-shadow:0 1px 8px #203e3f;margin:0 0 13px}.dock{display:flex;align-items:center;gap:0;border:1px solid #fff7;background:#faf7ecd9;backdrop-filter:blur(18px);border-radius:5px;padding:6px;box-shadow:0 9px 25px #21443924}.spot-btn{display:flex;align-items:center;justify-content:center;gap:9px;background:transparent;border:0;border-right:1px solid #71837035;padding:12px 22px;min-height:44px;font-size:12px;white-space:nowrap}.spot-btn>span:first-child{font-size:17px;color:#70846a}.spot-btn:hover{background:#ffffffa1}.spot-letter{border:0;background:#425d50;color:#fff9eb;border-radius:2px;margin-left:6px}.spot-letter>span:first-child{color:#ece3c6}.spot-letter:hover{background:#344d40}.quiet-tools{display:flex;gap:13px;align-items:center;justify-content:center;margin-top:9px;color:#fff8eb}.quiet-tools button{background:transparent;border:0;color:inherit;font-size:10px;letter-spacing:.04em;min-height:30px;text-shadow:0 1px 8px #173f3f}.quiet-tools button:hover{text-decoration:underline;text-underline-offset:4px}.quiet-tools>span{opacity:.5}.return-button{position:absolute;bottom:calc(22px + var(--safe-bottom));left:50%;transform:translateX(-50%);min-height:44px;border:1px solid #fff7;background:#faf7e7dc;border-radius:3px;padding:12px 20px;font-size:12px;white-space:nowrap}
+body.staying .topbar,body.staying .garden-caption,body.staying .garden-bottom,body.staying .hotspots{opacity:0;visibility:hidden;pointer-events:none}.topbar,.garden-caption,.garden-bottom,.hotspots{transition:opacity .65s,visibility .65s}.petals{position:absolute;inset:0;pointer-events:none;overflow:hidden}.petals i{position:absolute;top:-20px;width:8px;height:13px;border-radius:80% 10% 70% 30%;background:#f7d4ca;opacity:0;animation:petal-drift 21s linear infinite;filter:drop-shadow(0 0 3px #e9d7ae66)}.petals i:nth-child(1){left:12%;animation-delay:-5s}.petals i:nth-child(2){left:30%;animation-delay:-17s;animation-duration:27s;width:5px;height:9px}.petals i:nth-child(3){left:55%;animation-delay:-8s;animation-duration:25s}.petals i:nth-child(4){left:72%;animation-delay:-19s;animation-duration:29s}.petals i:nth-child(5){left:44%;animation-delay:-2s;animation-duration:31s;width:4px;height:7px}.petals i:nth-child(6){left:84%;animation-delay:-12s;animation-duration:24s;width:6px;height:10px}@keyframes petal-drift{0%{transform:translate(0,0) rotate(0);opacity:0}10%{opacity:.6}85%{opacity:.55}100%{transform:translate(-130px,105svh) rotate(340deg);opacity:0}}@keyframes light-breathe{to{opacity:.35}}
+body.reduce-motion .petals,body.reduce-motion .sunlight{display:none}body.reduce-motion .artwork{transform:none!important}body.reduce-motion *,body.reduce-motion *::before,body.reduce-motion *::after{animation:none!important;transition:none!important}body.page-hidden *{animation-play-state:paused!important}
+dialog{border:1px solid #e7deca;padding:0;background:var(--paper);color:var(--ink);border-radius:5px;max-height:calc(100svh - 40px);max-width:calc(100vw - 32px);box-shadow:0 20px 80px #102f3855;overscroll-behavior:contain}dialog::backdrop{background:#16383b80;backdrop-filter:blur(5px)}.note{width:460px;padding:36px;text-align:center;overflow-y:auto}.note-ornament{font-size:35px;color:#9aab8c;line-height:1.2;margin-bottom:18px}.note .eyebrow{font-size:9px;color:#7b8974;margin-bottom:12px}.note h2{font:normal 31px/1.15 var(--serif);text-wrap:balance;margin:0 0 20px}.note>p:not(.eyebrow){font-size:15px;line-height:1.85;color:#5c6c61;margin:0 0 28px}.dialog-actions{display:flex;align-items:center;justify-content:center;gap:12px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #425d50;border-radius:3px;padding:11px 17px;background:#425d50;color:#fff9ec;text-decoration:none;font-size:12px}.button-quiet{background:transparent;color:#425d50;border-color:#b3bcaa}.button:hover{transform:translateY(-1px)}.letter{width:620px;overflow:hidden}.letter[open]{display:flex;flex-direction:column}.paper{padding:38px 48px 12px;overflow-y:auto;overscroll-behavior:contain}.paper .eyebrow{color:#8a926e;font-size:9px;margin-bottom:15px}.paper h2{font:normal 38px/1.15 var(--serif);margin:0}.paper-rule{display:block;width:46px;height:1px;background:#b7b693;margin:24px 0}.paper p:not(.eyebrow){font:normal 18px/1.8 var(--serif);margin:0 0 18px}.paper .signoff{text-align:right;font-style:italic;padding-top:12px;color:#758367}.letter>.dialog-actions{padding:17px 24px;border-top:1px solid #e7e0cf;background:#f7f1e5;flex-shrink:0}.noscript-note,#art-error{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--paper);padding:24px;z-index:10;max-width:90vw}.noscript-note{width:360px}#art-error button{min-height:44px;padding:8px 16px}
+@media(max-width:900px){.brand-sub,.brand-separator{display:none}.topbar{left:5%;right:5%;top:calc(16px + var(--safe-top))}.top-actions{gap:15px}.intro{left:6%;width:43%;top:30%}.intro h1{font-size:clamp(38px,6.6vw,60px)}.intro-copy{font-size:13px}.spot-btn{padding:10px 15px}}
+@media(max-aspect-ratio:4/5){.artwork{inset:-5px}.intro-shade{background:linear-gradient(180deg,#183b4d77,rgba(24,59,62,.05) 46%,transparent 70%)}.edge-shade{background:linear-gradient(180deg,#153d4033,transparent 19%,transparent 72%,#183d3b99)}.intro{top:calc(103px + var(--safe-top));left:7%;width:86%;max-width:500px}.intro .eyebrow{font-size:9px;margin-bottom:11px}.intro h1{font-size:clamp(38px,10vw,57px);line-height:1.03;margin-bottom:15px;white-space:normal;max-width:350px}.intro-copy{font-size:12px;line-height:1.7;width:75%;max-width:270px;margin-bottom:17px}.open-button{min-height:44px;padding:9px 15px;gap:22px;font-size:11px}.intro-footnote{font-size:9px;margin-top:12px}.garden-caption{top:calc(88px + var(--safe-top));left:7%}.garden-caption h2{font-size:27px;max-width:260px}.garden-caption .eyebrow{font-size:8px}.garden-bottom{bottom:calc(13px + var(--safe-bottom));width:calc(100% - 28px);max-width:480px}.dock{padding:4px}.spot-btn{padding:9px 8px;gap:5px;font-size:11px;flex:1}.spot-btn>span:first-child{font-size:15px}.spot-letter{margin-left:3px;flex:1.35}.explore-hint{font-size:9px;margin-bottom:10px}.quiet-tools{margin-top:5px}.hotspot{font-size:10px;padding:5px 10px 5px 8px;gap:6px;min-height:44px}.paper{padding:28px 25px 8px}.paper h2{font-size:31px}.paper p:not(.eyebrow){font-size:17px;line-height:1.75}.note{padding:28px 24px}.note h2{font-size:28px}.note>p:not(.eyebrow){font-size:14px}.dialog-actions{gap:8px}.button{padding:10px 13px;font-size:11px}.wordmark{font-size:21px;gap:8px}.top-actions{font-size:10px;gap:12px}.text-control{font-size:10px}.lang button{min-width:28px}.brand-flower{font-size:24px}}
+@media(max-height:620px) and (min-aspect-ratio:4/5){.intro{top:22%;width:43%}.intro h1{font-size:44px;margin-bottom:12px}.intro .eyebrow{margin-bottom:10px}.intro-copy{font-size:12px;margin-bottom:15px}.intro-footnote{margin-top:8px}.garden-caption{top:80px}.garden-caption h2{font-size:24px}.garden-bottom{bottom:8px}.explore-hint{display:none}.topbar{top:12px}.quiet-tools{margin-top:2px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.petals,.sunlight{display:none}.artwork{transform:none!important}}
+/* Keep controls visible on short landscape screens and when text is enlarged. */
+@media(max-height:620px) and (min-aspect-ratio:4/5){#experience{min-height:100svh}.garden-caption{top:70px}.garden-caption .eyebrow{margin-bottom:4px}.garden-bottom{bottom:calc(4px + var(--safe-bottom))}.quiet-tools button{min-height:28px}.intro{top:21%}.intro h1{font-size:38px}.intro-copy{line-height:1.5}.intro .eyebrow{font-size:8px}.intro-footnote{font-size:9px}}
+.lang button{min-width:44px}
+@media(max-width:370px){.top-actions{gap:6px}.wordmark{font-size:19px}.brand-flower{font-size:20px}.lang{gap:0}.topbar{left:4%;right:4%}.intro{top:88px}.intro h1{font-size:35px}.intro-copy{font-size:11px;width:90%}.intro-footnote{display:none}}
+/* Scene responses: camera framing, painted sunlight, and local petals. */
+.artwork{transform:translate(calc(var(--pan-x,0px) + var(--focus-x,0px)),calc(var(--pan-y,0px) + var(--focus-y,0px))) scale(var(--scene-zoom,1));transition:transform 1.4s cubic-bezier(.2,.65,.2,1)}
+.artwork img{transition:filter 1.4s}.scene-sunset .artwork img{filter:saturate(1.12) sepia(.08)}.scene-sunset .sunlight{background:radial-gradient(ellipse at 15% 25%,#ffe7a480,transparent 65%);opacity:.7;animation:none}.scene-focused .hotspots{opacity:0;pointer-events:none}.scene-focused .hotspot,.scene-focused .hit-region{pointer-events:none}.scene-focused .garden-caption{opacity:0}.scene-focused .garden-bottom{opacity:0;visibility:hidden;pointer-events:none}
+.hit-region{position:absolute;transform:translate(-50%,-50%);background:transparent;border:0;pointer-events:auto;border-radius:45%;min-width:44px;min-height:44px}.hit-region:hover{background:#fff6c90d}.hit-region:focus-visible{outline:2px dashed #fff8d7;outline-offset:2px;background:#fff6c917}
+#note[open]{position:fixed;inset:auto auto 32px 4%;margin:0;width:350px;max-height:calc(100svh - 110px);padding:24px 26px;text-align:left;background:#fcf7eced;backdrop-filter:blur(16px);border:1px solid #fff8;box-shadow:0 12px 36px #173c3c30;z-index:20;animation:note-appear .45s ease both}#note .note-ornament{display:none}#note .eyebrow{font-size:8px;margin-bottom:8px}#note h2{font-size:27px;margin-bottom:12px}#note>p:not(.eyebrow){font-size:13px;line-height:1.7;margin-bottom:16px}#note .dialog-actions{justify-content:flex-start}#note .button{font-size:11px;padding:10px 12px}
+.scene-feedback{position:absolute;z-index:8;pointer-events:none;font:normal 30px var(--serif);color:#fff4d9;text-shadow:0 1px 6px #9b6d5566;animation:little-reply 2.5s ease-out forwards}.scene-feedback.petal-burst{font-size:24px;color:#ffd3d1;animation-duration:3s}
+@keyframes note-appear{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}@keyframes little-reply{0%{opacity:0;transform:translate(-50%,10px) scale(.6)}25%{opacity:1}100%{opacity:0;transform:translate(calc(-50% + var(--drift,0px)),-90px) rotate(15deg) scale(1.1)}}
+@media(max-aspect-ratio:4/5){#note[open]{left:14px;right:14px;bottom:calc(16px + var(--safe-bottom));width:auto;max-height:42svh;padding:20px 23px}#note h2{font-size:26px}#note>p:not(.eyebrow){font-size:13px;margin-bottom:14px}.scene-focused .topbar{opacity:.75}}
+@media(max-height:620px) and (min-aspect-ratio:4/5){#note[open]{left:3%;bottom:16px;max-height:calc(100svh - 90px);width:310px;padding:18px 22px}#note h2{font-size:24px}#note>p:not(.eyebrow){font-size:12px}}
+body.reduce-motion .scene-feedback{display:none}body.reduce-motion .artwork{transform:none!important}
+.letter[open]{transform-origin:50% 80%;animation:letter-unfold .6s cubic-bezier(.2,.65,.2,1) both}@keyframes letter-unfold{from{opacity:0;transform:translateY(25px) scale(.94) rotate(-1deg)}to{opacity:1;transform:none}}
+
+/* Living light layer (WebGL) over the painting, and discovery progress. */
+.living{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0;transition:opacity 1.2s ease;pointer-events:none}
+.living.is-ready{opacity:1}
+body.reduce-motion .living{display:none}
+.scene-sunset .artwork .living{filter:saturate(1.12) sepia(.08);transition:filter 1.4s,opacity 1.2s}
+.found{display:inline-block;margin:10px 0 0;padding:4px 11px;border-radius:20px;background:#1d3f3f73;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);font-size:12px;letter-spacing:.06em;color:#fffaf0;text-shadow:none}
+.found:empty{display:none}
+.all-found .spot-letter{box-shadow:0 0 0 2px #f7e2b0,0 0 26px 6px #ffe3a666;animation:letter-call 2.8s ease-in-out infinite}
+@keyframes letter-call{50%{box-shadow:0 0 0 2px #f7e2b0,0 0 34px 10px #ffe3a699}}
+.all-found .explore-hint{color:#fff4d8;font-weight:600}
+@media(max-aspect-ratio:4/5){.found{font-size:10px;margin-top:6px}}
+
+/* Time of day control and night styling */
+.time-of-day{display:flex;justify-content:center;gap:4px;margin:9px auto 0;width:max-content;padding:3px;border-radius:30px;background:#1d3f3f59;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.time-of-day button{display:flex;align-items:center;gap:6px;min-height:36px;padding:6px 12px;border:0;border-radius:30px;background:transparent;color:#fff8eb;font-size:11px;letter-spacing:.03em;cursor:pointer}
+.time-of-day button>span:first-child{font-size:14px}
+.time-of-day button[aria-pressed="true"]{background:#faf7ece6;color:#344840}
+.time-night .sunlight{opacity:0}
+.time-night .petals i{background:#e9e4f7;filter:drop-shadow(0 0 4px #c9d4ff99)}
+.time-night .edge-shade{background:linear-gradient(180deg,#0b1a3066,transparent 22%,transparent 72%,#0b1a3099)}
+body.time-night{background:#0f1d2e}
+@media(max-aspect-ratio:4/5){.time-of-day{margin-top:7px}.time-of-day button{padding:5px 10px;font-size:10px;min-height:34px}}
+@media(max-height:620px) and (min-aspect-ratio:4/5){.time-of-day{margin-top:4px}.time-of-day button{min-height:30px;padding:3px 9px}}
+
+/* Places in the little world (appear once more than one painting exists) */
+.places{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 auto 10px;width:max-content;max-width:100%;padding:3px;border-radius:30px;background:#1d3f3f59;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff8eb}
+.places[hidden]{display:none}
+.places p{margin:0;font:normal 15px/1.2 var(--serif);letter-spacing:.02em;min-width:9em;text-align:center}
+.place-step{width:40px;height:40px;border-radius:50%;border:1px solid #fff6;background:#faf7ece6;color:#344840;font-size:22px;line-height:1;cursor:pointer}
+.place-step:disabled{opacity:.35;cursor:default}
+@media(max-aspect-ratio:4/5){.places{margin-bottom:7px}.places p{font-size:13px}.place-step{width:36px;height:36px}}
+
+/* Close-up paintings and place changes: switch pictures, no zooming. */
+.closeup{position:absolute;inset:0;z-index:-2;opacity:0;visibility:hidden;transition:opacity .8s ease,visibility .8s;background:#183d3b}
+.closeup-open .closeup{opacity:1;visibility:visible}
+.closeup-open .edge-shade{background:linear-gradient(180deg,#153d4055,transparent 25%,transparent 60%,#183d3bb3)}
+.artwork{transform:translate(var(--pan-x,0px),var(--pan-y,0px))!important;transition:transform 1.8s ease,opacity .45s ease}
+.place-switching .artwork{opacity:0}
+.place-switching .garden-caption,.place-switching .hotspots{opacity:0}
+
+/* Close-ups show the whole square painting, never cropped, over a soft blurred copy of itself. */
+.closeup .closeup-bg{position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;filter:blur(28px) brightness(.78) saturate(1.1)}
+.closeup .closeup-art{position:absolute;top:50%;right:max(5vw,24px);left:auto;transform:translateY(-50%);width:auto;height:min(84svh,58vw);aspect-ratio:1;object-fit:contain;border-radius:6px;box-shadow:0 20px 60px #10262a66}
+@media(max-aspect-ratio:4/5){.closeup .closeup-art{top:calc(78px + var(--safe-top));right:auto;left:50%;transform:translateX(-50%);height:auto;width:min(92vw,52svh)}}
+.time-of-day[hidden]{display:none}
+
+/* Compact world controls: place arrows at the painting's sides, time of day inside the quiet row. */
+.places{position:absolute;inset:50% 10px auto 10px;transform:translateY(-50%);display:flex;justify-content:space-between;margin:0;padding:0;width:auto;max-width:none;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;pointer-events:none;z-index:2}
+.places p{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.place-step{pointer-events:auto;width:46px;height:46px;font-size:26px;background:#faf7ecd9;box-shadow:0 4px 16px #1f3c3b40;backdrop-filter:blur(8px)}
+.place-step:disabled{visibility:hidden}
+.quiet-tools{flex-wrap:wrap}
+.quiet-tools .time-of-day{margin:0;padding:2px}
+.time-of-day button{min-height:32px;padding:4px 10px}
+@media(min-aspect-ratio:4/5){
+  body[data-dock="left"] .garden-bottom{left:5%;transform:none}
+  body[data-dock="right"] .garden-bottom{left:auto;right:4%;transform:none}
+}
+@media(max-aspect-ratio:4/5){
+  .time-of-day button>span:last-child{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .time-of-day button{min-width:40px;min-height:40px;justify-content:center;padding:4px 8px}
+  .time-of-day button>span:first-child{font-size:16px}
+  .explore-hint{display:none}
+  .place-step{width:42px;height:42px;font-size:24px}
+  .places{top:40%}
+}
+
+.scene-focused .places,.staying .places{opacity:0;pointer-events:none}
+.places{transition:opacity .5s}
+
+/* Intro legibility over the bright painting */
+.intro-copy,.intro-footnote,.intro .eyebrow{text-shadow:0 1px 3px #12333acc,0 0 18px #12333a99}
+.intro-copy{font-size:max(13px,1em)}
+.intro-footnote{font-size:max(11px,1em);opacity:1}
+@media(max-aspect-ratio:4/5){.intro-copy{font-size:13px}.intro-footnote{font-size:11px}.intro-shade{background:linear-gradient(180deg,#183b4d99,rgba(24,59,62,.25) 40%,transparent 66%)}}
+.quiet-tools button{min-height:40px;padding:0 10px}
+@media(max-height:620px) and (min-aspect-ratio:4/5){.quiet-tools button{min-height:34px}}
+
+/* Small surprises */
+.sky-fx{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.sky-fx .shoot{position:absolute;top:var(--y,12%);left:62%;width:min(22vw,260px);height:2px;border-radius:2px;opacity:0;background:linear-gradient(90deg,#fffbe9,#fffbe900);transform:rotate(28deg);filter:drop-shadow(0 0 6px #fff6d8)}
+.sky-fx .shoot.go{animation:shoot 1.6s ease-out forwards}
+@keyframes shoot{0%{opacity:0;transform:translate(0,0) rotate(28deg)}12%{opacity:1}100%{opacity:0;transform:translate(-38vw,22vw) rotate(28deg)}}
+.fireflies{position:absolute;inset:0;display:none}
+.time-night .fireflies,body[data-place="starry-bench"] .fireflies{display:block}
+.fireflies i{position:absolute;width:5px;height:5px;border-radius:50%;background:#fff2b0;box-shadow:0 0 10px 3px #ffe58a88;opacity:0;animation:firefly 12s ease-in-out infinite}
+@keyframes firefly{0%,100%{opacity:0;transform:translate(0,0)}20%{opacity:.9}50%{opacity:.35;transform:translate(var(--dx),var(--dy))}80%{opacity:.9}}
+.rain{position:absolute;inset:0}
+.rain i{position:absolute;top:-24px;border-radius:80% 10% 70% 30%;background:#f7d4ca;opacity:0;animation:rain-fall linear forwards;filter:drop-shadow(0 0 4px #fff3d588)}
+@keyframes rain-fall{0%{opacity:0;transform:translate(0,0) rotate(0)}10%{opacity:.85}90%{opacity:.7}100%{opacity:0;transform:translate(var(--sway),108svh) rotate(420deg)}}
+.paper .ps{font-style:italic;color:#6b5a3c;margin-top:1.6em}
+body.reduce-motion .sky-fx{display:none}
+@media(prefers-reduced-motion:reduce){.sky-fx{display:none}}
+body.staying .sky-fx{z-index:3}
+
+/* `clip` (unlike `hidden`) can never be scrolled by focus or scrollIntoView, so the painting never slides off its edge. */
+@supports (overflow:clip){#experience,.artwork,.sky-fx{overflow:clip}}

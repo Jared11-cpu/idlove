@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#648e98">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="A painted seaside garden, a few little things, and a letter for you.">
+  <title>A little garden for you</title>
+  <link rel="icon" href="assets/petal.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="image" href="assets/img/anime-2d-v1/garden-portrait.webp" media="(max-aspect-ratio: 4/5)">
+  <link rel="preload" as="image" href="assets/img/anime-2d-v1/garden-landscape.webp" media="(min-aspect-ratio: 4/5)">
+</head>
+<body>
+  <main id="experience">
+    <div id="artwork" class="artwork" aria-hidden="true">
+      <picture>
+        <source media="(max-aspect-ratio: 4/5)" srcset="assets/img/anime-2d-v1/garden-portrait.webp">
+        <img id="garden-art" src="assets/img/anime-2d-v1/garden-landscape.webp" alt="" fetchpriority="high" width="1672" height="941">
+      </picture>
+      <div class="sunlight"></div>
+      <div class="petals"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div id="closeup" class="closeup" aria-hidden="true"><img class="closeup-bg" alt="" decoding="async"><img class="closeup-art" alt="" decoding="async"></div>
+    <div class="sky-fx" id="sky-fx" aria-hidden="true"><i class="shoot"></i><div class="fireflies"></div><div class="rain"></div></div>
+    <div class="intro-shade" aria-hidden="true"></div>
+    <div class="edge-shade" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a href="#intro" id="home" class="wordmark" aria-label="Return to introduction"><span class="brand-flower" aria-hidden="true">✳</span> <span>untukmu</span><span class="brand-separator" aria-hidden="true"></span><span class="brand-sub" data-ui="brandSub"></span></a>
+      <div class="top-actions">
+        <button id="motion-btn" class="text-control" type="button" aria-pressed="false" data-ui="motion"></button>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-label="English">EN</button><span aria-hidden="true">/</span><button type="button" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
+        </div>
+      </div>
+    </header>
+
+    <section id="intro" class="intro" aria-labelledby="intro-title">
+      <p class="eyebrow" data-ui="eyebrow"></p>
+      <h1 id="intro-title" data-ui="headline"></h1>
+      <p class="intro-copy" data-ui="introCopy"></p>
+      <button id="open-gift" class="open-button" type="button"><span data-ui="enter"></span><span aria-hidden="true">↗</span></button>
+      <p class="intro-footnote" data-ui="footnote"></p>
+    </section>
+
+    <section id="garden" hidden aria-labelledby="garden-title">
+      <div class="garden-caption"><p class="eyebrow" data-ui="gardenEyebrow"></p><h2 id="garden-title" data-ui="gardenTitle"></h2><p id="found" class="found" aria-live="polite"></p></div>
+      <nav class="places" id="places" aria-label="Places" hidden><button type="button" id="place-prev" class="place-step" aria-label="Previous place">‹</button><p id="place-name" aria-live="polite"></p><button type="button" id="place-next" class="place-step" aria-label="Next place">›</button></nav>
+      <div id="hotspots" class="hotspots" aria-label="Explore the garden"></div>
+      <div class="garden-bottom">
+        <p class="explore-hint" id="explore-hint" aria-live="polite"></p>
+        
+        <nav class="dock" aria-label="Garden keepsakes"></nav>
+        
+        <div class="quiet-tools"><div class="time-of-day" role="group" id="time-of-day"><button type="button" data-time="golden" aria-pressed="true"><span aria-hidden="true">☼</span><span data-ui="timeGolden"></span></button><button type="button" data-time="sunset" aria-pressed="false"><span aria-hidden="true">◐</span><span data-ui="timeSunset"></span></button><button type="button" data-time="night" aria-pressed="false"><span aria-hidden="true">☾</span><span data-ui="timeNight"></span></button></div><span class="tod-sep" aria-hidden="true">·</span><button id="song-btn" type="button" aria-haspopup="dialog">♪ <span data-i18n="song"></span></button><span aria-hidden="true">·</span><button id="quiet-btn" type="button" data-i18n="stay"></button></div>
+      </div>
+    </section>
+
+    <button id="return-btn" class="return-button" hidden type="button" data-ui="return"></button>
+    <div id="art-error" role="status" hidden><p data-ui="imageError"></p><button id="retry-art" type="button" data-ui="retry"></button></div>
+    <p id="scene-description" class="sr-only" data-ui="sceneDescription"></p>
+  </main>
+
+  <dialog id="note" class="note" aria-labelledby="note-title">
+    <div class="note-ornament" aria-hidden="true">❀</div><p class="eyebrow" data-ui="noteKicker"></p>
+    <h2 id="note-title"></h2><p id="note-body"></p>
+    <div class="dialog-actions"><button id="note-letter" class="button button-quiet" type="button" data-i18n="readLetter"></button><button class="button" data-close type="button" data-ui="backGarden"></button></div>
+  </dialog>
+  <dialog id="letter" class="letter" aria-labelledby="letter-title">
+    <article class="paper"><p class="eyebrow" data-ui="letterKicker"></p><h2 id="letter-title" data-i18n="letterTitle"></h2><span class="paper-rule" aria-hidden="true"></span><div id="letter-body"></div><p class="signoff" data-i18n="signoff"></p></article>
+    <div class="dialog-actions"><button id="stay-btn" class="button button-quiet" type="button" data-i18n="stay"></button><button class="button" data-close type="button" data-i18n="close"></button></div>
+  </dialog>
+  <dialog id="song" class="note" aria-labelledby="song-title">
+    <div class="note-ornament" aria-hidden="true">♪</div><h2 id="song-title">JVKE · her</h2><p data-i18n="songNote"></p>
+    <div class="dialog-actions"><a id="song-link" class="button" target="_blank" rel="noopener noreferrer">YouTube ↗</a><button class="button button-quiet" data-close type="button" data-i18n="close"></button></div>
+  </dialog>
+  <noscript><div class="noscript-note">A garden for you. Please enable JavaScript to explore the flowers and open your letter.</div></noscript>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

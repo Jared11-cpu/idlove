@@ -1,0 +1,32 @@
+export const ui = {
+  en: {
+    brandSub: 'a little world for you', eyebrow: 'A LETTER, A GARDEN, A LITTLE SUNSHINE',
+    headline: 'Where the\nlight stays.', introCopy: 'I kept a little of the sunset, a few flowers, and a quiet place beside the sea. All for you.',
+    enter: 'Step into the garden', footnote: 'Take your time. Everything here can wait.',
+    gardenEyebrow: 'SOME LITTLE THINGS YOU LOVE', gardenTitle: 'A moment, just for you.',
+    explore: 'A few little things to discover. No hurry.', noteKicker: 'REMEMBERED, WITH LOVE',
+    letterSpot: 'Your letter', letterKicker: 'A FEW WORDS I WANTED TO KEEP', backGarden: 'Back to the garden', backPlace: 'Back', secretsLabel: 'secrets', ps: 'P.S. You found every little thing. Thank you for taking your time here.', allFoundSecret: ' Some paintings also hide a small secret.', foundOf: (n, t) => `${n} of ${t} little things found`,
+    return: '← Back to the little things', motion: 'Stillness', sceneDescription: 'An illustrated seaside garden at sunset. A blonde woman with a blue ribbon holds a letter on a bench. A cream cat rests among pink tulips. Painted clouds glow above the ocean.',
+    imageError: 'The garden image could not load. You can still open the letter.', retry: 'Try the image again',
+    allFound: 'You found all three. One more thing is waiting for you: your letter.', timeLabel: 'Time of day', timeGolden: 'Golden hour', timeSunset: 'Sunset glow', timeNight: 'Starry night', home: 'Return to introduction', language: 'Language', places: 'Explore the garden',
+  },
+  id: {
+    brandSub: 'dunia kecil untukmu', eyebrow: 'SEPucuk SURAT, TAMAN, DAN CAHAYA SENJA'.toUpperCase(),
+    headline: 'Di sini,\ncahaya tinggal.', introCopy: 'Kusimpan sedikit senja, beberapa bunga, dan tempat tenang di tepi laut. Semuanya untukmu.',
+    enter: 'Masuk ke taman', footnote: 'Pelan-pelan saja. Semua di sini bisa menunggu.',
+    gardenEyebrow: 'HAL-HAL KECIL YANG KAMU SUKAI', gardenTitle: 'Sejenak, hanya untukmu.',
+    explore: 'Ada hal-hal kecil untuk ditemukan. Tak perlu buru-buru.', noteKicker: 'DIINGAT, DENGAN SAYANG',
+    letterSpot: 'Suratmu', letterKicker: 'KATA-KATA YANG INGIN KUSIMPAN', backGarden: 'Kembali ke taman', backPlace: 'Kembali', secretsLabel: 'rahasia', ps: 'P.S. Kamu menemukan semua hal kecilnya. Terima kasih sudah meluangkan waktu di sini.', allFoundSecret: ' Beberapa lukisan juga menyimpan rahasia kecil.', foundOf: (n, t) => `${n} dari ${t} hal kecil ditemukan`,
+    return: '← Kembali melihat taman', motion: 'Tanpa gerakan', sceneDescription: 'Ilustrasi taman di tepi laut saat senja. Seorang perempuan berambut pirang dengan pita biru memegang surat di bangku. Seekor kucing krem beristirahat di antara tulip merah muda. Awan bercahaya di atas laut.',
+    imageError: 'Gambar taman belum bisa dimuat. Kamu tetap bisa membuka surat.', retry: 'Coba muat gambar lagi',
+    allFound: 'Kamu sudah menemukan ketiganya. Masih ada satu hal lagi yang menunggumu: suratmu.', timeLabel: 'Waktu', timeGolden: 'Senja keemasan', timeSunset: 'Langit jingga', timeNight: 'Malam berbintang', home: 'Kembali ke pembuka', language: 'Bahasa', places: 'Jelajahi taman',
+  },
+  zh: {
+    brandSub: '只给你的小世界', eyebrow: '一封信 · 一座花园 · 一点晚霞', headline: '让晚霞，\n多停留一会儿。',
+    introCopy: '留下一点日落，几枝花，还有海边一个安静的位置。都想送给你。', enter: '走进这座花园', footnote: '慢慢来，这里的一切都可以等你。',
+    gardenEyebrow: '记住你喜欢的小事', gardenTitle: '这一刻，只留给你。', explore: '点一点，看看这里藏着的小事。不用着急。',
+    noteKicker: '认真记住的喜欢', letterSpot: '给你的信', letterKicker: '想慢慢告诉你的话', backGarden: '回到花园', backPlace: '返回', secretsLabel: '个秘密', ps: '附：你把每一件小事都找到了。谢谢你愿意在这里慢慢停留。', allFoundSecret: ' 有些画里还藏着小小的秘密。', foundOf: (n, t) => `已发现 ${n}/${t} 件小事`, return: '← 回到花园里的小事', motion: '静止画面',
+    sceneDescription: '日落时的海边花园插画。系蓝色缎带的金发女孩坐在长椅上拿着信，奶油色小猫卧在粉色郁金香旁，细腻的云霞映照着大海。',
+    imageError: '花园图片暂时未能加载，你仍然可以打开信件。', retry: '重新加载图片', allFound: '三件小事都找到了。还有一样东西在等你：你的信。', timeLabel: '时间', timeGolden: '黄昏', timeSunset: '晚霞', timeNight: '星空', home: '回到开场', language: '语言', places: '探索花园',
+  },
+};
